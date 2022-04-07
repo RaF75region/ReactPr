@@ -7,13 +7,27 @@
 html {
   font-size: 14px;
 }
+
+.page{
+  position: relative;
+  display: flex;
+}
+
+main{
+  flex:1;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
   }
 }
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.NavFlexContainer{
+  display: block !important;
 }

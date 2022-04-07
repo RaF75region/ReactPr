@@ -7,11 +7,18 @@ export class Layout extends Component {
 
   render () {
     return (
-      <div>
+      <div className='page'>
         <NavMenu />
-        <Container>
-          {this.props.children}
-        </Container>
+        <main>
+          <div className='top-row px-4'>
+              <a href="logon">Sign/Registre</a>
+          </div>
+            
+          <Container fluid={true}>
+            {this.props.children}
+          </Container>
+          
+        </main>
       </div>
     );
   }

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import List  from '@mui/icons-material';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import HomeIcon from '@mui/icons-material/Home';
 import './NavMenu.css';
+import MenuHeader from './MenuHeader';
+import { grid } from '@mui/system';
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -25,13 +30,18 @@ export class NavMenu extends Component {
     return (
       <header>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-          <Container>
+          <Container className='NavFlexContainer'>
             <NavbarBrand tag={Link} to="/">ReactPr</NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-              <ul className="navbar-nav flex-grow">
+              <ul className="navbar-nav d-flex flex-column">
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                  <ListItemIcon>
+                                <HomeIcon fontSize="small" />
+                      </ListItemIcon>
+                  <NavLink tag={Link} className="text-dark" to="/">
+                      Home
+                  </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
