@@ -8,10 +8,11 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import DraftsIcon from '@mui/icons-material/Drafts';
-
+import Button from '@mui/material/Button'
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 
 import { Home } from './Home';
+import { IconButton } from '@mui/material';
 
 export default function (){
     const [menu_list,setMenuList] = useState([]);
@@ -23,12 +24,9 @@ export default function (){
         <div>
         <MenuList>
                 <MenuItem LinkComponent={Home}>
-                    
-                        <ListItemIcon>
-                            <SendIcon fontSize="small" />
-                        </ListItemIcon>
-                        <Typography variant="inherit">Home</Typography>
-                    
+                    <Button  >
+                        Home
+                    </Button>
                 </MenuItem>
                 <MenuItem 
                  href='/counter'>

@@ -4,9 +4,12 @@ import { Link } from 'react-router-dom';
 import List  from '@mui/icons-material';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import HomeIcon from '@mui/icons-material/Home';
+import InboxIcon from '@mui/icons-material/Inbox';
+import MailIcon from '@mui/icons-material/Mail';
 import './NavMenu.css';
 import MenuHeader from './MenuHeader';
 import { grid } from '@mui/system';
+import Button from '@mui/material/Button'
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -25,7 +28,7 @@ export class NavMenu extends Component {
       collapsed: !this.state.collapsed
     });
   }
-
+  /*Передать список ПО*/
   render () {
     return (
       <header>
@@ -36,21 +39,24 @@ export class NavMenu extends Component {
             <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
               <ul className="navbar-nav d-flex flex-column">
                 <NavItem>
-                  <ListItemIcon>
-                                <HomeIcon fontSize="small" />
-                      </ListItemIcon>
-                  <NavLink tag={Link} className="text-dark" to="/">
-                      Home
-                  </NavLink>
+                    <Button startIcon={<HomeIcon fontSize='large'/>} size="large">
+                      <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                    </Button>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+                  <Button startIcon={<InboxIcon fontSize='large'/>} size="large">
+                      <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+                    </Button>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                  <Button startIcon={<MailIcon fontSize='large'/>} size="large">
+                      <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                    </Button>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/testpage">Test Page</NavLink>
+                    <Button startIcon={<HomeIcon fontSize='large'/>} size="large">
+                      <NavLink tag={Link} className="text-dark" to="/testpage">Test Page</NavLink>
+                    </Button>
                 </NavItem>
               </ul>
             </Collapse>
