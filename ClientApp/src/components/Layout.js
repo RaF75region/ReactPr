@@ -1,6 +1,8 @@
+import { Toolbar } from '@mui/material';
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { NavMenu } from './NavMenu';
+import Tbar from './Tollbar';
 
 export class Layout extends Component {
   static displayName = Layout.name;
@@ -11,7 +13,7 @@ export class Layout extends Component {
         <NavMenu />
         <main>
           <div className='top-row px-4'>
-              <a href="logon">Sign/Registre</a>
+              <Tbar />
           </div>
             
           <Container fluid={true}>

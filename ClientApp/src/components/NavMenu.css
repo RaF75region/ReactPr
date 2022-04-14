@@ -13,6 +13,11 @@ html {
   display: flex;
 }
 
+.navbar{
+  height: 100vh !important;
+  display: block;
+}
+
 main{
   flex:1;
 }
