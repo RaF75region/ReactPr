@@ -25,7 +25,7 @@ export default function (){
         <MenuList>
                 <MenuItem LinkComponent={Home}>
                     <Button  >
-                        Home
+                        Homes
                     </Button>
                 </MenuItem>
                 <MenuItem 

@@ -7,9 +7,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import InboxIcon from '@mui/icons-material/Inbox';
 import MailIcon from '@mui/icons-material/Mail';
 import './NavMenu.css';
-import MenuHeader from './MenuHeader';
 import { grid } from '@mui/system';
-import Button from '@mui/material/Button'
+import Button from '@mui/material/Button';
+
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
@@ -60,6 +60,7 @@ export class NavMenu extends Component {
                       <NavLink tag={Link} className="text-dark" to="/testpage">Test Page</NavLink>
                     </Button>
                 </NavItem>
+                
               </ul>
             </Collapse>
           </Container>
