@@ -40,7 +40,7 @@ export class NavMenu extends Component {
               <ul className="navbar-nav d-flex flex-column">
                 <NavItem>
                   <div>
-                    <Button startIcon={<HomeIcon fontSize='large'/>} size="large">
+                    <Button fullWidth='true' variant="text" startIcon={<HomeIcon fontSize='large'/>} size="large">
                       <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                     </Button>
                     </div>
