@@ -1,11 +1,18 @@
 import { Toolbar } from '@mui/material';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Container } from 'reactstrap';
 import { NavMenu } from './NavMenu';
 import Tbar from './Tollbar';
 
 export class Layout extends Component {
   static displayName = Layout.name;
+
+  constructor(props){
+    super(props);
+    this.state={
+      anim:true,
+    };
+  }
 
   render () {
     return (

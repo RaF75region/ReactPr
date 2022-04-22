@@ -40,23 +40,23 @@ export class NavMenu extends Component {
               <ul className="navbar-nav d-flex flex-column">
                 <NavItem>
                   <div>
-                    <Button fullWidth='true' variant="text" startIcon={<HomeIcon fontSize='large'/>} size="large">
+                    <Button fullWidth='true' variant="text" style={{justifyContent: "flex-start"}} startIcon={<HomeIcon fontSize='large'/>} size="large">
                       <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
                     </Button>
                     </div>
                 </NavItem>
                 <NavItem>
-                  <Button startIcon={<InboxIcon fontSize='large'/>} size="large">
+                  <Button fullWidth='true' variant="text" style={{justifyContent: "flex-start"}} startIcon={<InboxIcon fontSize='large'/>} size="large">
                       <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
                     </Button>
                 </NavItem>
                 <NavItem>
-                  <Button startIcon={<MailIcon fontSize='large'/>} size="large">
+                  <Button fullWidth='true' variant="text" style={{justifyContent: "flex-start"}}  startIcon={<MailIcon fontSize='large'/>} size="large">
                       <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
                     </Button>
                 </NavItem>
                 <NavItem>
-                    <Button startIcon={<HomeIcon fontSize='large'/>} size="large">
+                    <Button fullWidth='true' variant="text" style={{justifyContent: "flex-start"}}  startIcon={<HomeIcon fontSize='large'/>} size="large">
                       <NavLink tag={Link} className="text-dark" to="/testpage">Test Page</NavLink>
                     </Button>
                 </NavItem>

@@ -21,7 +21,21 @@ function doCalcelation(
     )
 }
 
-export default function SearchToolBar(){
+const element = ()=>{
+    return(
+        <div>
+
+        </div>
+    );
+}
+
+function IconButtonClick(){
+    
+}
+
+
+export default function SearchToolBar(anim:boolean){
+    const [classAnim,setClassAnim]=React.useState('');
     return(
         <Box sx={{flexGrow: 1}}>
             <AppBar position='static'>
