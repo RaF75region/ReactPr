@@ -1,11 +1,28 @@
 using ReactPr.Hub;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using ReactPr.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
+
+builder.Services.AddDbContext<IdentityContext>(opts=>{
+    opts.UseSqlite(connectionString);
+});
+
+/*builder.Services.Configure<IdentityOptions>(opts=>{
+    opts.Password.RequiredLength=6;
+    opts.Password.RequireNonAlphanumeric=false;
+    opts.Password.RequireLowercase=true;
+    opts.Password.RequireUppercase=true;
+    opts.Password.RequireDigit=true;
+});
+*/
+builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 
 builder.Services.AddCors(options =>
 {
