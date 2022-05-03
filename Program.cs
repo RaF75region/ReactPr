@@ -14,14 +14,14 @@ builder.Services.AddDbContext<IdentityContext>(opts=>{
     opts.UseSqlite(connectionString);
 });
 
-/*builder.Services.Configure<IdentityOptions>(opts=>{
+builder.Services.Configure<IdentityOptions>(opts=>{
     opts.Password.RequiredLength=6;
     opts.Password.RequireNonAlphanumeric=false;
     opts.Password.RequireLowercase=true;
     opts.Password.RequireUppercase=true;
     opts.Password.RequireDigit=true;
 });
-*/
+
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 
 builder.Services.AddCors(options =>

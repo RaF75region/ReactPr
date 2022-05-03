@@ -47,17 +47,17 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                   <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}} startIcon={<InboxIcon fontSize='large'/>} size="large">
-                      <NavLink tag={Link} className="text-dark" to="/counter">Counter</NavLink>
+                      <NavLink tag={Link} className="text-dark" to="/counter">Справочник</NavLink>
                     </Button>
                 </NavItem>
                 <NavItem>
                   <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}}  startIcon={<MailIcon fontSize='large'/>} size="large">
-                      <NavLink tag={Link} className="text-dark" to="/fetch-data">Fetch data</NavLink>
+                      <NavLink tag={Link} className="text-dark" to="/fetch-data">Ресурсы</NavLink>
                     </Button>
                 </NavItem>
                 <NavItem>
                     <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}}  startIcon={<HomeIcon fontSize='large'/>} size="large">
-                      <NavLink tag={Link} className="text-dark" to="/testpage">Test Page</NavLink>
+                      <NavLink tag={Link} className="text-dark" to="/testpage">Мои персонажи</NavLink>
                     </Button>
                 </NavItem>
                 
