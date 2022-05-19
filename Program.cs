@@ -2,6 +2,7 @@ using ReactPr.Hub;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using ReactPr.Models;
+using ReactPr.Models.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -14,6 +15,10 @@ builder.Services.AddDbContext<IdentityContext>(opts=>{
     opts.UseSqlite(connectionString);
 });
 
+builder.Services.AddDbContext<ContextDB>(opts=>{
+    opts.UseSqlite(connectionString);
+});
+
 builder.Services.Configure<IdentityOptions>(opts=>{
     opts.Password.RequiredLength=6;
     opts.Password.RequireNonAlphanumeric=false;
@@ -23,6 +28,9 @@ builder.Services.Configure<IdentityOptions>(opts=>{
 });
 
 builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+
+builder.Services.AddScoped<IRepository,Repository>();
+
 
 builder.Services.AddCors(options =>
 {

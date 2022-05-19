@@ -9,6 +9,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import './NavMenu.css';
 import { grid } from '@mui/system';
 import Button from '@mui/material/Button';
+//import * from '@mui/icons-material/'
 
 
 export class NavMenu extends Component {
@@ -57,7 +58,12 @@ export class NavMenu extends Component {
                 </NavItem>
                 <NavItem>
                     <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}}  startIcon={<HomeIcon fontSize='large'/>} size="large">
-                      <NavLink tag={Link} className="text-dark" to="/testpage">Мои персонажи</NavLink>
+                      <NavLink tag={Link} className="text-dark">Мои персонажи</NavLink>
+                    </Button>
+                </NavItem>
+                <NavItem>
+                    <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}}  startIcon={<HomeIcon fontSize='large'/>} size="large">
+                      <NavLink tag={Link} className="text-dark" to="/test">Тестовая</NavLink>
                     </Button>
                 </NavItem>
                 

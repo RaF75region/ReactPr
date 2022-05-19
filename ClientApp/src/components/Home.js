@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import TestInterface from './TestInterface';
 
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
@@ -21,10 +22,17 @@ export class Home extends Component {
   static displayName = Home.name;
   constructor(props){
     super(props);
-    this.state={out:<div class="h-100">MUUUUUUU</div>}
-
+    this.state={
+      out:<div class="h-100">MUUUUUUU</div>,
+      cl:"",
+    }
   }
 
+  clickTest=()=>{
+    this.setState({
+      cl: "ddddddddd"
+    });
+  }
 
   render () {
     return (
@@ -32,8 +40,12 @@ export class Home extends Component {
         {element}
         <Button variant='contained'>Hello</Button>
         <Link href="/counter" underline="always">
-          ++++
+          
         </Link>
+        <h3>{this.state.cl}</h3>
+        
+        <TestInterface id={2} name="Aleks" myFunction={this.clickTest}></TestInterface>
+
         <h1>Hello, world!</h1>
         <p>Welcome to your new single-page application, built with:</p>
         <ul>

@@ -30,25 +30,3 @@ const SearchToolBar =(props: { toolbarDownUp: () => void; })=>{
 };
 
 export default SearchToolBar;
-
-/*export default function SearchToolBar(){
-    return(
-        <Box sx={{flexGrow: 1}}>
-            <AppBar position='static'>
-                <Toolbar>
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ mr: 2 }}
-                        
-                        >
-                        <MenuIcon />
-                    </IconButton>
-                    dasda
-                </Toolbar>
-                </AppBar>
-              </Box>
-    );
-};*/
