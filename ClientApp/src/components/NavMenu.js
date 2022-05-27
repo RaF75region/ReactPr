@@ -10,17 +10,20 @@ import './NavMenu.css';
 import { grid } from '@mui/system';
 import Button from '@mui/material/Button';
 //import * from '@mui/icons-material/'
-
+import IModalTitleProps from './AuthenticationComponent/IModalTitleProps'
+import { Dialog } from '@mui/material';
+import Autentification from './AuthenticationComponent/Autentification'
 
 export class NavMenu extends Component {
   static displayName = NavMenu.name;
 
   constructor (props) {
     super(props);
-
+    this.windowOpen=this.windowOpen.bind(this);
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      openAuth:false
     };
   }
 
@@ -29,6 +32,13 @@ export class NavMenu extends Component {
       collapsed: !this.state.collapsed
     });
   }
+
+  windowOpen(value){
+    this.setState({
+      openAuth:value
+    });
+  }
+
   /*Передать список ПО*/
   render () {
     return (
@@ -66,9 +76,14 @@ export class NavMenu extends Component {
                       <NavLink tag={Link} className="text-dark" to="/test">Тестовая</NavLink>
                     </Button>
                 </NavItem>
-                
+                <NavItem>
+                    <Button fullWidth={true} variant="text" style={{justifyContent: "flex-start"}}  startIcon={<HomeIcon fontSize='large'/>} size="large">
+                      <NavLink onClick={()=>this.windowOpen(true)}>Войти</NavLink>
+                    </Button>
+                </NavItem>
               </ul>
             </Collapse>
+            <Autentification open={this.state.openAuth} close={this.windowOpen}></Autentification>
           </Container>
         </Navbar>
       </header>

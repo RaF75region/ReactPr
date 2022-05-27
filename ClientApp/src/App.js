@@ -6,6 +6,7 @@ import {TestPage} from './components/TestPage';
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
 import {TestComponent} from './components/TestComponents/TestComponent'
+import {AutentificationС} from './components/AuthenticationComponent/AutentificationC'
 
 import './custom.css'
 
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path='/fetch-data' component={FetchData} />
         <Route path='/testpage' component={TestPage} />
         <Route path='/test' component={TestComponent} />
+        <Route path='/autentification' component={AutentificationС} />
       </Layout>
     );
   }
